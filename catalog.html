@@ -42,16 +42,19 @@
         </ul>
       </nav>
     </header>
+    <!-- шапка аналогично индексу-->
 
     <main class="container">
         <ul class="breadcrumbs">
+          <!-- first - это очень абстрактно. лучше home -->
             <li class="breadcrumbs-first"><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="instrument.html">Инстурмент</a></li>
             <li class="breadcrumbs-current">Перфораторы</li>
         </ul>
         <h1>Перфораторы</h1>
-
+        
+        <!-- общий родитель-->
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <h3>Производители</h3>
@@ -68,6 +71,7 @@
                 <li><a href="#">Сетевые</a></li>
             </ul>
             <button type="button" class="filters-btn">Показать</button>
+          <!-- всю левую колонку пока игнорим, но это форма. каждый твой h3 - legend, твои ссылки - это лейблы -->
         </section>
 
         <section class="catalog">
@@ -76,6 +80,7 @@
                     <h3>
                         <a href="item.html">Перфоратор BOSCH BFG 3000</a>
                     </h3>
+                    <!-- в альте слово лишний вид убери. продублируй просто название товара-->
                     <img src="img/perforator3000.jpg" alt="Внешнйи вид перфоратора BOSCH BFG 3000">                    
                     <p class="old-price">22500 Р.</p>
                     <p class="price">15500 Р.</p>
@@ -84,6 +89,8 @@
                         <a href="bookmark.html" class="item-bookmark">В закладки</a>
                     </div>                    
                 </li>
+                <!-- картинка идет до названия товара-->       
+       
 
                 <li class="catalog-item">
                     <h3>
@@ -190,6 +197,7 @@
                 </li>
             </ul>
         </section>
+        <!-- конец общего родителя-->
     </main>
 
     <footer class="main-footer">
@@ -219,6 +227,6 @@
       <p class="footer-email">Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
       <p class="footer-academy">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">mail@htmlacademy.ru</a></p>
     </footer>
-
+    <!-- футер аналогично индексу-->
   </body>
 </html>

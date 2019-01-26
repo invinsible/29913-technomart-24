@@ -7,7 +7,9 @@
   <body>
     <header class="main-header">
       <nav class="top-nav">
+        <!-- Зачем тут nav, это просто блок в шапке сайта. Навигация по сайту у нас ниже -->
         <a class="logo">Техномарт</a>
+        <!-- поиск - это должен быть инпут. Если мы что-то вводим и отправляем, значит этот инпут должен быть в теге form. вывод - заменить ссылку с поиском на форму с инпутом -->
         <a href="search.html" class="search">Поиск</a>
         <div class="user-order-menu">
           <a href="bookmark.html" class="bookmark">Закладки: <span>0</span></a>
@@ -15,7 +17,8 @@
           <a href="order.html" class="order-btn">Оформить заказ</a>
         </div>
       </nav>
-
+      
+      <!-- какой-то общий родитель -->
       <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <div class="header-contacts">
         <a href="tel:88125550555" class="header-phone">+7 (812)555-05-55</a>
@@ -23,10 +26,13 @@
       </div> 
       <ul class="login-menu">
         <li class="sign-in-btn"><a href="sign-in.html">Войти</a></li>
+        <!-- вот тут холиварный вопрос. ты дал класс для ли, что бы в дальнейшем дать чуть другие стили для ссылки внутри. там может сразу дать этот класс ссылке :) ? -->
         <li><a href="registration.html">Регистрация</a></li>
       </ul>
+      <!-- конец какого-то общего родителя -->
 
       <nav class="main-nav">
+        <!-- во! вот тут нав отлично подходит -->
         <ul class="site-menu">
           <li><a href="index.html">Главная</a></li>
           <li><a href="about.html">Компания</a></li>
@@ -40,6 +46,9 @@
     </header>
 
     <main class="container">
+      <!-- у нас эбаут и контакты - 2 колонки, нужно дать общего родителя. Меин не подойдет, так как будут еще ж секции выше -->
+      <!-- общий родитель -->
+      
       <section class="about">
         <h2>Компания «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
@@ -56,13 +65,21 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <img src="img/map.jpg" alt="Компания Техномарт на карте" width="300">
+        <!-- забегая наперед - твоя кнопка должна быть ссылкой -->
         <button type="button" class="contacts-btn">Заблудились? Напишите нам!</button>
       </section>
+      
+      <!--конец общего родителя  -->
     </main>
 
     <footer class="main-footer">
+      <!-- тут тоже лучше разделить на 2 колонки. в первом лого и контакты, во второй навигация -->
+      
+      <!-- колонка-->
       <a class="logo">Техномарт</a>
       <p class="footer-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <!-- конец колонки-->
+      <!-- колонка-->
       <ul class="footer-menu">
         <li><a href="about.html">Компания</a></li>
         <li><a href="news.html">Новости</a></li>
@@ -76,7 +93,9 @@
         <li><a href="instrument.html">Инструмент</a></li>
         <li><a href="spec-offer.html">Спецпредложения</a></li>
       </ul>
-
+      <!-- конец колонки-->
+      
+      <!-- новый блок -->
       <p class="copyright">© 2010–2019 Компания «Техномарт» Все права защищены</p>
       <ul class="social-links">
         <li><a href="https://vk.com" class="social-btn vk-btn" target="_blank">Вконтакте</a></li>
@@ -86,6 +105,7 @@
 
       <p class="footer-email">Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
       <p class="footer-academy">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">mail@htmlacademy.ru</a></p>
+      <!-- конец нового общего блока-->
     </footer>
 
   </body>

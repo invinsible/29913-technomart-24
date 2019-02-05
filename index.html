@@ -52,40 +52,49 @@
         <h2 class="visually-hidden">Основные разделы и преимущества</h2>      
         <ul class="main-category">
           <li class="main-materials new-label">
-            <p>Материалы</p> 
+            <h3>Материалы</h3> 
             <a href="catalog.html">На любой вкус</a>           
           </li>
           <li class="main-instrument">
-            <p>Инстурмент</p>
+            <h3>Инстурмент</h3>
             <a href="catalog.html">На все случаи</a>            
           </li>
           <li class="main-tehnika">
-            <p>Техника</p>
+            <h3>Техника</h3>
             <a href="catalog.html">Для стройки</a>            
           </li>
         </ul>        
         <div class="slider-and-features">
           <div class="slider">
-            <div class="slider-item slide-1">
-              <p class="slider-title">Дрели</p>
-              <p>Соседям на радость!</p>
-              <a class="btn" href="catalog.html">Открыть каталог</a>
-            </div>
-            <div class="slider-item slide-2">
-              <p class="slider-title">Перфораторы</p>
-              <p>Настоящие мужские игрушки</p>
-              <a class="btn" href="catalog.html">Открыть каталог</a>
-            </div>
-            <button class="btn-slider btn-back" type="button">Назад</button>
-            <button class="btn-slider btn-next" type="button">Вперед</button>
+            <input type="radio" id="btn-1" name="toggle" checked>              
+            <input type="radio" id="btn-2" name="toggle"> 
+            <div class="slider-controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>                
+            </div>                       
+            <div class="slider-inner">
+              <ul class="slider-slides">
+                <li class="slider-item slide-1">
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость!</p>
+                  <a class="btn" href="catalog.html">Открыть каталог</a>
+                </li>
+                <li class="slider-item slide-2">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a class="btn" href="catalog.html">Открыть каталог</a>
+                </li>
+              </ul>
+            </div>            
           </div>
+          
           <ul class="features">
             <li class="features-discount">
-              <p>Скидки 50%</p>
+              <h3>Скидки 50%</h3>
               <a href="specoffer.html">На 350 товаров</a>
             </li>
             <li class="features-delivery">
-              <p>Доставка</p>
+              <h3>Доставка</h3>
               <a href="delivery.html">Бесплатно</a>
             </li>
           </ul>
@@ -94,7 +103,7 @@
 
       <section class="popular-items">
         <div class="popular-title">
-          <h3>Популярные товары</h3>
+          <h2>Популярные товары</h2>
           <a class="btn" href="popular-items.html">Все популярные товары</a>
         </div>
         <ul class="popular-items-list">
@@ -104,7 +113,11 @@
                 <a href="item.html">Перфоратор BOSH BFG 9000</a>
               </h3>
               <p class="old-price">32500 Р.</p>
-              <p class="price">25500 Р.</p>            
+              <p class="price">25500 Р.</p>
+              <div class="item-buttons">
+                <a class="item-buy" href="basket.html">Купить</a>
+                <a class="item-bookmark" href="bookmark.html">В закладки</a>
+              </div>            
           </li>
           <li class="popular-item">            
               <img src="img/perforator3000.jpg" width="218" height="170" alt="Перфоратор BOSH BFG 3000">
@@ -112,7 +125,11 @@
                 <a href="item.html">Перфоратор BOSH BFG 3000</a>
               </h3>
               <p class="old-price">22500 Р.</p>
-              <p class="price">15500 Р.</p>            
+              <p class="price">15500 Р.</p>
+              <div class="item-buttons">
+                <a class="item-buy" href="basket.html">Купить</a>
+                <a class="item-bookmark" href="bookmark.html">В закладки</a>
+              </div>            
           </li>
           <li class="popular-item">            
               <img src="img/perforator6000.jpg" width="218" height="170" alt="Перфоратор BOSH BFG 6000">
@@ -120,61 +137,69 @@
                 <a href="item.html">Перфоратор BOSH BFG 6000</a>
               </h3>
               <p class="old-price">30500 Р.</p>
-              <p class="price">25500 Р.</p>            
+              <p class="price">25500 Р.</p>
+              <div class="item-buttons">
+                <a class="item-buy" href="basket.html">Купить</a>
+                <a class="item-bookmark" href="bookmark.html">В закладки</a>
+              </div>            
           </li>
           <li class="popular-item new-label">            
               <img src="img/perforator2000.jpg" width="218" height="170" alt="Перфоратор BOSH BFG 2000">
               <h3>
                 <a href="item.html">Перфоратор BOSH BFG 2000</a>
               </h3>
-              <p class="price">12500 Р.</p>            
+              <p class="price">12500 Р.</p>
+              <div class="item-buttons">
+                <a class="item-buy" href="basket.html">Купить</a>
+                <a class="item-bookmark" href="bookmark.html">В закладки</a>
+              </div>            
           </li>
         </ul>  
       </section>
 
       <section class="popular-brands">
         <div class="popular-title">
-          <h3>Популярные производители</h3>
+          <h2>Популярные производители</h2>
           <a class="btn" href="catalog.html">Все производители</a>
         </div>
         <ul class="popular-brands-list">
           <li class="popular-brand">
-            <a href="catalog.html" aria-label="Bosch">
+            <a href="catalog-bosch.html" aria-label="Bosch">
               <img src="img/brand1.png" width="126" height="37" alt="Bosch">
             </a>
           </li>
           <li class="popular-brand">
-            <a href="catalog.html" aria-label="Makita">
+            <a href="catalog-makita.html" aria-label="Makita">
               <img src="img/brand2.png" width="123" height="40" alt="Makita">
             </a>
           </li>
           <li class="popular-brand">
-            <a href="catalog.html" aria-label="Dewalt">
+            <a href="catalog-dewalt.html" aria-label="Dewalt">
               <img src="img/brand3.png" width="146" height="44" alt="Dewalt">
             </a>
           </li>
           <li class="popular-brand">
-            <a href="catalog.html" aria-label="Интеркол">
+            <a href="catalog-interskol.html" aria-label="Интеркол">
               <img src="img/brand4.png" width="200" height="88" alt="Интеркол">
             </a>
           </li>
           <li class="popular-brand">
-            <a href="catalog.html" aria-label="Hitachi">
+            <a href="catalog-hitachi.html" aria-label="Hitachi">
               <img src="img/brand5.png" width="169" height="31" alt="Hitachi">
             </a>
           </li>
           <li class="popular-brand">
-            <a href="catalog.html" aria-label="LG">
+            <a href="catalog-lg.html" aria-label="LG">
               <img src="img/brand6.png" width="121" height="73" alt="LG">
             </a>
           </li>
           <li class="popular-brand">
-            <a href="catalog.html" aria-label="AEG">
+            <a href="catalog-aeg.html" aria-label="AEG">
               <img src="img/brand7.png" width="151" height="96" alt="AEG">
             </a>
           </li>
           <li class="popular-brand">
-            <a href="catalog.html" aria-label="Metabo">
+            <a href="catalog-metabo.html" aria-label="Metabo">
               <img src="img/brand8.png" width="204" height="69" alt="Metabo">
             </a>
           </li>
@@ -187,30 +212,30 @@
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <ul class="services-tabs">
           <li>
-            <a class="tab-link active" href="#delivery-tab">Доставка</a>
+            <button class="tab-link active">Доставка</button>
           </li>
           <li>
-            <a class="tab-link" href="#garanty-tab">Гарантия</a>
+            <button class="tab-link">Гарантия</button>
           </li>
           <li>
-            <a class="tab-link" href="#credit-tab">Кредит</a>
+            <button class="tab-link">Кредит</button>
           </li>
         </ul>
         <div class="services-content-tabs">
-          <div class="tab-content delivery-tab" id="delivery-tab">
+          <div class="tab-content delivery-tab">
             <h3>Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо 
                 к вашему подъезду совершенно бесплатно!
                 Ведь мы неплохо заработаем, 
                 поднимая его на ваш этаж!</p>
           </div>
-          <div class="tab-content garanty-tab" id="garanty-tab">
+          <div class="tab-content garanty-tab">
             <h3>Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит, 
                 а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
                 Дом уж восстановите как-нибудь сами.</p>
           </div>
-          <div class="tab-content credit-tab" id="credit-tab">
+          <div class="tab-content credit-tab">
             <h3>Кредит</h3>
             <p>Залезть в долговую яму стало проще! 
                 Кредитные консультанты придут вам на помощь.</p>
@@ -241,17 +266,21 @@
 
       <div class="popup-map">
         <button class="popup-close" type="button" aria-label="Закрыть модальное окно"></button>
-        <img src="img/map-popup.png" width="940" height="446" alt="Компания Техномарт на большой карте">
+        <img src="img/map-popup.png" width="940" height="446" alt="Компания Техномарт на карте">
       </div>
 
       <div class="popup-callback">
         <button class="popup-close" type="button" aria-label="Закрыть модальное окно"></button>
         <form class="callback" action="callback.php" method="POST">
-          <label for="appointment-name">Ваше имя:</label>
-          <input id="appointment-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+          <div class="form-column"></div>
+            <label for="appointment-name">Ваше имя:</label>
+            <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
+          </div>
 
-          <label for="appointment-email">Ваш e-mail:</label>
-          <input id="appointment-email" type="email" name="email" value="" placeholder="email@example.com">
+          <div class="form-column">
+            <label for="appointment-email">Ваш e-mail:</label>
+            <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+          </div>
 
           <label for="appointment-text">Текст письма:</label>
           <textarea id="appointment-text" name="text" cols="30" rows="10">В свободной форме</textarea>

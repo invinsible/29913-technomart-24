@@ -1,0 +1,62 @@
+body {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+}
+a {
+  text-decoration: none;
+}
+.main-header {
+  background: #f4f7f9;
+}
+
+.top-header,
+.main-nav {
+  background: #293449;
+}
+
+.logo,
+.btn {
+  background: #ee3643;
+}
+
+.logo:hover,
+.logo:focus,
+.btn:hover,
+.btn:focus {
+  background: #ca2c37;
+}
+
+.logo:active, .btn: {
+  background: #ba2732;
+}
+
+.middle-header h1,
+.header-title {  
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: #ee3643;
+}
+
+.header-contacts {
+  text-align: center;
+}
+
+.header-phone {
+  font-size: 21px;  
+  line-height: 21px;
+  color: #ee3643;
+}
+
+.header-adress {
+  line-height: 24px;
+  color: #32425c;
+}
+
+.login-menu a {
+  font-size: 21px;
+  line-height: 21px;
+}

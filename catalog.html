@@ -2,6 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Каталог — Техномарт</title>
   </head>
   <body>
@@ -28,7 +32,7 @@
             <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="user-control">
-            <p class="user-name">Равшан Джамшутович <a class="user-exit" href="exit.html">Выход</a></p>
+            <p class="user-name">Равшан Джамшутович <a class="user-exit" href="exit.html" aria-label="Кнопка выхода"><img src="img/icon-logout.svg" width="20" height="17" alt="Кнопка выхода"></a></p>
             <ul class="user-menu">
               <li><a href="myorder.html">Мои заказы</a></li>
               <li><a href="personal.html">Личный кабинет</a></li>
@@ -50,13 +54,14 @@
       </div>
     </header>
 
-    <main class="container">
+    <main class="catalog-page container">
       <ul class="breadcrumbs">
         <li class="breadcrumbs-home"><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="instrument.html">Инстурмент</a></li>
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
+
       <h1>Перфораторы</h1>
 
       <section class="shop">
@@ -233,7 +238,7 @@
 
       <div class="popup-basket-succes">
         <button class="popup-close" type="button" aria-label="Закрыть модальное окно"></button>        
-        <p class="popup-title-seccus">Товар добавлен в корзину!</p>
+        <p class="popup-title-succes">Товар добавлен в корзину!</p>
         <div class="popup-footer">
           <a class="btn" href="order.html">Оформить заказ</a>
           <button type="button">Продолжить покупки</button>

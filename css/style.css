@@ -11,12 +11,19 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .new-label::before {
@@ -592,10 +599,17 @@ a {
 }
 
 .slider-item {
+  position: relative;
+  min-height: 266px;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
   background: #cccccc;
+}
+
+.sider-item-description {
+  position: relative;
+  z-index: 2;
 }
 
 .slider-item .btn {
@@ -604,10 +618,22 @@ a {
 }
 
 .slider-item h3{
+  margin: 0;
   font-size: 36px;
   line-height: 36px;
   color: #ffffff;
   text-transform: uppercase;  
+}
+
+.slider-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slider-controls input {
+  display: none;
 }
 
 /* /Основные разделы и преимущества */
@@ -1323,9 +1349,8 @@ a {
 }
 
 .slider {
+  position: relative;
   width: 620px;
-  height: 266px;
-  background-color: red;
 }
 
 .slider-slides {

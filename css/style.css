@@ -251,7 +251,7 @@ a {
 }
 
 .header-contacts {
-  margin-right: 69px;
+  margin-right: 47px;
 }
 
 .header-phone {
@@ -333,11 +333,79 @@ a {
   opacity: 0.3;
 }
 
+.user-control {
+  position: relative;
+  width: 300px;
+  max-width: 300px;
+}
+
 .user-name {
+  position: relative;
+  display: block;
+  padding: 12px 50px 12px 47px;
+  margin: 0;
+  margin-bottom: 9px; 
   font-size: 21px;
   line-height: 21px;
-  background-color: #ffffff;
+  color: #000000;
+  background-color: #ffffff;  
+}
+
+.user-name::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/icon-user.svg');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.user-name:hover::before,
+.user-name:focus::before,
+.user-exit:hover,
+.user-exit:focus {
+  opacity: 1;
+}
+
+.user-name:active {
+  opacity: 0.3;;
+}
+
+.user-exit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 12px;
+  right: 20px;
+  background-image: url('../img/icon-logout.svg');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.user-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 17px;
   margin: 0;
+  list-style: none;
+}
+
+.user-menu li::after {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #32425c;
+  margin: 0 17px;
+}
+
+.user-menu li:last-child::after {
+  display: none;
 }
 
 .user-menu a {
@@ -357,11 +425,7 @@ a {
   text-decoration: none;
 }
 
-.user-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+
 
 .site-menu {
   display: flex;
@@ -573,8 +637,11 @@ a {
 
 .item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 218px;
-  min-height: 315px;
+  padding-bottom: 20px;
   margin-bottom: 22px;
   margin-right: 20px;
   font-family: 'PT Sans', Arial, sans-serif;
@@ -601,7 +668,7 @@ a {
 }
 
 .old-price {
-  margin-bottom: 7px;
+  margin-bottom: 13px;
   font-size: 17px;
   font-weight: bold;
   color: #999999;
@@ -612,6 +679,7 @@ a {
   position: relative;
   display: inline-block;
   margin: 0;
+  margin-top: auto;
   padding: 10px 30px;
   font-size: 17px;
   font-weight: bold;
@@ -1244,17 +1312,6 @@ a {
 
 
 
-
-
-.user-control {
-  width: 300px;
-}
-
-.user-menu{
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 17px;
-}
 
 
 

@@ -1167,10 +1167,18 @@ input[type="radio"].visually-hidden {
 .filter-form fieldset {
   padding: 0;
   margin: 0;
-  border: none;  
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;  
+}
+
+.filter-form fieldset:last-of-type {
+  border-bottom: none;
+  margin-bottom: 50px;
 }
 
 .filter-form legend {
+  margin-bottom: 20px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
@@ -1181,6 +1189,7 @@ input[type="radio"].visually-hidden {
 .filter-form ul {
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
   list-style: none;
 }
 
@@ -1230,7 +1239,7 @@ input[type="radio"].visually-hidden {
 .filter-radio + label::before {
   content: "";
   position: absolute;
-  left: -42px;
+  left: -35px;
   top: 0;
   width: 19px;
   height: 19px;
@@ -1240,7 +1249,7 @@ input[type="radio"].visually-hidden {
 
 .filter-radio:checked + label::after {
   content: "";
-  left: -42px;
+  left: -35px;
   top: 0;
   position: absolute;
   width: 30px;
@@ -1251,12 +1260,13 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-form button[type="submit"] {
-  border: none;
+  padding: 11px 37px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   background-color: transparent;
   border: 1px solid #e5e5e5;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .pagination-item a {
@@ -1436,7 +1446,7 @@ input[type="radio"].visually-hidden {
 
 .copyright {
   width: 320px;
-  margin-right: 70px;
+  margin-right: 65px;
   font-size: 16px;
   line-height: 18px;  
 }
@@ -1444,7 +1454,7 @@ input[type="radio"].visually-hidden {
 .social-links {  
   display: flex;
   padding-left: 0;
-  margin: 10px 115px 0 0;
+  margin: 10px 120px 0 0;
 }
 
 .social-links  li {
@@ -1485,8 +1495,14 @@ input[type="radio"].visually-hidden {
 
 .footer-email,
 .footer-academy {
+  margin-top: 13px;
   margin-bottom: 0;
   font-size: 16px;
+  line-height: 20px;
+}
+
+.footer-email {
+  margin-right: 53px;
 }
 
 .footer-email a,

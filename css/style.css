@@ -70,7 +70,8 @@ input[type="radio"].visually-hidden {
 
 .btn {
   display: block;
-  padding: 10px 69px;
+  padding: 10px 30px;
+  min-width: 195px;
   color: #ffffff;
   text-align: center;  
   background-color: #ee3643;
@@ -293,6 +294,8 @@ input[type="radio"].visually-hidden {
 .login-menu {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
 
 .login-menu a {
@@ -351,7 +354,7 @@ input[type="radio"].visually-hidden {
   display: block;
   padding: 12px 50px 12px 47px;
   margin: 0;
-  margin-bottom: 9px; 
+  margin-bottom: 7px; 
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -361,8 +364,8 @@ input[type="radio"].visually-hidden {
 .user-name::before {
   content: '';
   position: absolute;
-  top: 12px;
-  left: 17px;
+  top: 13px;
+  left: 15px;
   width: 20px;
   height: 20px;
   background-image: url('../img/icon-user.svg');
@@ -385,8 +388,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 12px;
-  right: 20px;
+  top: 14px;
+  right: 11px;
   background-image: url('../img/icon-logout.svg');
   background-repeat: no-repeat;
   opacity: 0.3;
@@ -408,7 +411,7 @@ input[type="radio"].visually-hidden {
   vertical-align: middle;
   border-radius: 50%;
   background-color: #32425c;
-  margin: 0 17px;
+  margin: 0 15px;
 }
 
 .user-menu li:last-child::after {
@@ -580,6 +583,11 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/icon-3.svg);  
 }
 
+.slider-and-features {
+  display: flex;
+  justify-content: space-between;
+}
+
 .features-discount {
   margin-bottom: 20px;
   background-color: #8ed78f;
@@ -598,21 +606,55 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/icon-5.svg);  
 }
 
+
+
+.slider {
+  position: relative;
+  overflow: hidden;  
+}
+
+.slider-slides {
+  width: 200%;
+  padding-left: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.slider-inner {
+  width: 620px;
+}
+
+.slider input {
+  display: none;
+}
+
 .slider-item {
   position: relative;
-  min-height: 266px;
+  height: 266px;
+  float: left;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
   background: #cccccc;
+  overflow: hidden;
 }
 
 .sider-item-description {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 22px;
+  left: 25px;
+  max-width: 90%;
+  z-index: 1;
+}
+
+.sider-item-description p {
+  margin: 0;
 }
 
 .slider-item .btn {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin-top: 123px;
   font-size: 14px;
   line-height: 18px;
 }
@@ -625,15 +667,62 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;  
 }
 
-.slider-item img {
+.slider-controls {
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: 1;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.slider-controls input {
-  display: none;
+.slider-controls label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-slider {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 40px;
+  transform: translateY(-50%);
+  border: none;  
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.btn-slider:hover {
+  opacity: 0.3;
+}
+
+.btn-back {
+  background-image: url('../img/icon-left.svg');
+  left: 25px;  
+}
+
+.btn-next {
+  background-image: url('../img/icon-right.svg');  
+  right: 20px;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+  background-color: #ee3643;
+}
+
+#btn-1:checked ~ .slider-inner .slider-slides {
+  transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-inner .slider-slides {
+  transform: translate(-620px);
 }
 
 /* /Основные разделы и преимущества */
@@ -682,11 +771,11 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-.item-title {  
-  font-size: 18px;
-  line-height: 20px;
-  margin-top: 0;
+.item-title { 
   padding: 0 20px;
+  margin: 10px 0 0 0;
+  font-size: 18px;
+  line-height: 20px;  
 }
 
 .item-title a {
@@ -694,7 +783,7 @@ input[type="radio"].visually-hidden {
 }
 
 .old-price {
-  margin-bottom: 13px;
+  margin: 10px 0;
   font-size: 17px;
   font-weight: bold;
   color: #999999;
@@ -1343,24 +1432,8 @@ input[type="radio"].visually-hidden {
 
 
 
-.slider-and-features {
-  display: flex;
-  justify-content: space-between;
-}
 
-.slider {
-  position: relative;
-  width: 620px;
-}
 
-.slider-slides {
-  padding-left: 0;
-  margin: 0;
-}
-
-.slide-2 {
-  display: none;
-}
 
 .popular-title {
   display: flex;

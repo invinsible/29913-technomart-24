@@ -26,6 +26,12 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .new-label::before {
   content: '';
   position: absolute;
@@ -69,7 +75,7 @@ input[type="radio"].visually-hidden {
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   padding: 10px 30px;
   min-width: 195px;
   color: #ffffff;
@@ -938,12 +944,17 @@ input[type="radio"].visually-hidden {
   background-color: #f4f7f9;
 }
 
-.text-title {  
+.text-title {
+  margin: 0;
+  margin-bottom: 26px;
   font-size: 30px;
   font-weight: normal;
-  line-height: 30px;
-  margin: 0;
-  text-transform: uppercase;
+  line-height: 30px;    
+  text-transform: uppercase;    
+}
+
+.main-services .default-text {
+  width: 400px;
 }
 
 .default-text {
@@ -951,11 +962,6 @@ input[type="radio"].visually-hidden {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
-}
-
-.delivery-company {
-  list-style: none;
-  padding-left: 0;
 }
 
 .services-tabs {
@@ -990,9 +996,64 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
+.main-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  height: 455px;
+}
+
+.about {
+  padding-right: 55px;
+ }
+
+.about .default-text {
+  margin-bottom: 23px;
+}
+
+.about .btn {
+  min-width: 160px;
+}
+
+.contacts {
+  width: 300px;
+}
+
+.contacts .default-text {
+  padding-right: 90px;
+  margin-bottom: 30px;
+}
+
+.contacts .btn {
+  display: block;
+}
+
+.map-link {
+  display: block;
+  margin-bottom: 35px;
+}
+
+.delivery-company {
+  padding-left: 0;
+  margin-bottom: 38px;
+  list-style: none;
+}
+
 .delivery-company li {
+  margin-bottom: 18px;
   font-size: 18px;
   line-height: 20px;
+}
+
+.delivery-company li:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 2px;
+  margin-right: 10px;
+  background-color: #ee3643;
 }
 
 .tab-link {
@@ -1236,8 +1297,30 @@ input[type="radio"].visually-hidden {
   background-color: #f4f4f4;
 }
 
-.popup-map {  
-  /* background-color: #565656; */
+.popup-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;  
+  top: 10px;
+  right: 10px;
+  background-image: url('../img/icon-close.svg');
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+.popup-close:hover {
+  opacity: 0.6;
+}
+
+.popup-map {
+  position: absolute;
+  top: 33px;
+  left: 50%;
+  transform: translateX(-50%);
+  width:940px;
+  height: 446px;  
+  background-image: url('../img/map-popup.png'); 
   box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);  
 }
 
@@ -1415,11 +1498,7 @@ input[type="radio"].visually-hidden {
 
 
 /*  */
-.container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
+
 
 
 
@@ -1447,30 +1526,7 @@ input[type="radio"].visually-hidden {
 
 
 
-.text-title {
-  margin-bottom: 27px;    
-}
 
-.main-services .default-text {
-  width: 400px;
-}
-
-
-
-.main-info {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 80px;
-  height: 455px;
-}
-
-.about {
-  width: 585px;
-}
-
-.contacts {
-  width: 300px;
-}
 
 .popup-map,
 .popup-callback {

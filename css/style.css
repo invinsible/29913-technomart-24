@@ -1444,6 +1444,10 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 }
 
+.popup-map iframe {
+  border: 0;
+}
+
 .popup-callback {
   position: absolute;
   left: 50%;

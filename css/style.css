@@ -1192,7 +1192,92 @@ input[type="radio"].visually-hidden {
   margin-bottom: 20px;
   list-style: none;
 }
+/* Filter range */
 
+.filter-range {
+  color: black;
+  text-transform: uppercase;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  margin-left: -4px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  padding: 39px 30px;
+  background-color: #f7f3ec;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: green;
+}
+
+.range-toggle {
+  position: absolute;
+  top: 30px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 30px;
+}
+
+.range-toggle-max {
+  left: 65%;
+}
+
+
+/* /Filter range */
 .filter-option {
   padding-left: 35px;
   margin-bottom: 14px;

@@ -72,10 +72,25 @@
         <div class="filter">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filter-form" action="filter.php" method="GET">
-            <fieldset>
-              <legend>Цена:</legend>
-              <input type="range" min="10" max="100">
-            </fieldset>
+
+              
+              <div class="filter-sorting">Фильтр:</div>
+              <fieldset class="filter-range">
+                <legend>Цена:</legend>
+                <div class="range-controls"> 
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price"><input type="text" name="min-price" value="0"></label>
+                  <label class="max-price"><input type="text" name="max-price" value="30000"></label>
+                </div>                
+              </fieldset>                
+              
+            
             <fieldset>
               <legend>Производители:</legend>
               <ul>

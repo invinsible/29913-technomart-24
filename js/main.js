@@ -12,16 +12,19 @@ var toggleShow = function(arg) {
   arg.classList.toggle("popup-show");
 };
 
-mapLink.addEventListener("click", function(evt) {
-  evt.preventDefault();  
-  toggleShow(popupMap);
-});
+if (mapLink != null) {
+  mapLink.addEventListener("click", function(evt) {
+    evt.preventDefault();  
+    toggleShow(popupMap);
+  });
+};
 
-formLink.addEventListener("click", function(evt) {
-  evt.preventDefault();  
-  toggleShow(popupForm);
-});
-
+if (formLink != null) {
+  formLink.addEventListener("click", function(evt) {
+    evt.preventDefault();  
+    toggleShow(popupForm);
+  });
+};
 
 for (var i = 0, l = popupClose.length; i < l; i++) {
   popupClose[i].addEventListener("click", function(evt) {

@@ -176,7 +176,7 @@ input[type="radio"].visually-hidden {
 
 .user-order-link{
   position: relative;
-  padding: 13px 31px 13px 45px;
+  padding: 13px 30px 13px 47px;
   font-size: 17px;
   line-height: 16px;
   color: #ffffff;
@@ -238,6 +238,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-order-link.active {
+  padding-right: 26px;
   background-color: #ee3643;
 }
 
@@ -271,7 +272,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header-contacts {
-  margin-right: 47px;
+  margin-right: 53px;
 }
 
 .header-phone {
@@ -279,7 +280,7 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 180px;
   margin-bottom: 2px;
-  padding: 10px 10px 10px 77px;
+  padding: 10px 10px 10px 71px;
   font-size: 21px;  
   line-height: 21px;
   color: #ee3643;
@@ -289,7 +290,7 @@ input[type="radio"].visually-hidden {
 .header-phone::before {
   content: '';
   position: absolute;
-  left: 17px;
+  left: 13px;
   width: 19px;
   height: 19px;
   background-image: url('../img/icon-phone.svg');
@@ -298,7 +299,7 @@ input[type="radio"].visually-hidden {
 
 .header-adress {
   margin: 0;
-  margin-left: 15px;
+  margin-left: 10px;
   line-height: 24px;
   color: #32425c;
 }
@@ -796,7 +797,7 @@ input[type="radio"].visually-hidden {
 
 .item-title { 
   padding: 0 20px;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   font-size: 18px;
   line-height: 20px;  
 }
@@ -1239,18 +1240,18 @@ input[type="radio"].visually-hidden {
 .filter-form fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   border: none;
   border-bottom: 1px solid #e5e5e5;  
 }
 
 .filter-form fieldset:last-of-type {
   border-bottom: none;
-  margin-bottom: 50px;
+  margin-bottom: 59px;
 }
 
 .filter-form legend {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
@@ -1272,21 +1273,32 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-range legend {
+  margin-bottom: 20px;
   line-height: 17px;
 }
 
 .price-controls {
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  height: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .price-controls label {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
-  cursor: pointer;
+  position: relative;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.price-controls input {
+  width: 75px;
+  height: 38px;
+  padding: 0 10px;
+  margin: 0; 
+  text-align: center;
+  background: none;
+  border: none;
 }
 
 .price-controls .min-price,
@@ -1294,17 +1306,16 @@ input[type="radio"].visually-hidden {
   background-color: #f7f3ec;
 }
 
-.price-controls input {
-  width: 50px;
-  margin: 0; 
-  text-align: center;
-  background: none;
-  border: none;
+.min-price::after {
+  content: '—';
+  position: absolute;
+  right: -23px;
+  top: 10px;
 }
-
 .range-controls {
   position: relative;
-  padding: 39px 30px;
+  padding: 37px 30px;
+  margin-bottom: 10px;
   background-color: #f7f3ec;
 }
 
@@ -1314,7 +1325,7 @@ input[type="radio"].visually-hidden {
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 85%;
   height: 2px;
   background: #00ca74;
 }
@@ -1336,20 +1347,21 @@ input[type="radio"].visually-hidden {
 }
 
 .range-toggle-min {
-  left: 30px;
+  left: 20px;
 }
 
 .range-toggle-max {
-  left: 65%;
+  left: 73%;
 }
 
 
 /* /Filter range */
-.filter-option {
+.filter-option {  
   padding-left: 35px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 15px;
-  line-height: 23px;
+  line-height: 20px;
   text-transform: uppercase;
 }
 
@@ -1364,7 +1376,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   left: -35px;
-  top: 0;
+  top: -2px;
   width: 19px;
   height: 19px;
   border: 2px solid #ccc;
@@ -1374,7 +1386,7 @@ input[type="radio"].visually-hidden {
 .filter-checkbox:checked + label::after {
   content: "";
   left: -35px;
-  top: 0;
+  top: -2px;
   position: absolute;
   width: 27px;
   height: 23px; 

@@ -296,29 +296,33 @@
       <div class="popup popup-callback">
         <button class="popup-close" type="button" aria-label="Закрыть модальное окно"></button>
         <form class="callback" action="callback.php" method="POST">
-          <div class="form-column">
-            <label for="appointment-name">Ваше имя:</label>
-            <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
-          </div>
+          <div class="popup-content">
+            <p class="form-column">
+              <label for="appointment-name">Ваше имя:</label>
+              <input id="appointment-name" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
 
-          <div class="form-column">
-            <label for="appointment-email">Ваш e-mail:</label>
-            <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
-          </div>
+            <p class="form-column">
+              <label for="appointment-email">Ваш e-mail:</label>
+              <input id="appointment-email" type="email" name="email" placeholder="email@example.com">
+            </p>
 
-          <label for="appointment-text">Текст письма:</label>
-          <textarea id="appointment-text" name="text" cols="55" rows="5">В свободной форме</textarea>
+            <label for="appointment-text">Текст письма:</label>
+            <textarea id="appointment-text" name="text" cols="55" rows="5">В свободной форме</textarea>
+          </div>
           <div class="popup-footer">
             <button class="btn" type="submit">Отправить</button>
           </div>
         </form>
       </div>
       <div class="popup-basket-success">
-        <button class="popup-close" type="button" aria-label="Закрыть модальное окно"></button>        
-        <p class="popup-title-success">Товар добавлен в корзину!</p>
+        <button class="popup-close" type="button" aria-label="Закрыть модальное окно"></button>
+        <div class="popup-content">        
+          <p class="popup-title-success">Товар добавлен в корзину!</p>
+        </div>
         <div class="popup-footer">
-          <a class="btn" href="order.html">Оформить заказ</a>
-          <button type="button">Продолжить покупки</button>
+          <a class="popup-btn-success btn" href="order.html">Оформить заказ</a>
+          <button class="continue-btn" type="button">Продолжить покупки</button>
         </div>
       </div>
     </main>

@@ -1431,8 +1431,14 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
+.popup-content {
+  padding: 0 78px;
+  min-width: 465px;
+}
+
 .popup-footer {
   background-color: #f4f4f4;
+  padding: 37px 78px;
 }
 
 .popup-callback .btn {
@@ -1460,7 +1466,7 @@ input[type="radio"].visually-hidden {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width:940px;
+  width: 940px;
   height: 446px;  
   background-image: url('../img/map-popup.png'); 
   box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
@@ -1474,8 +1480,7 @@ input[type="radio"].visually-hidden {
   position: fixed;
   top: 50%;
   left: 50%;
-  max-width: 465px;
-  padding: 45px 80px;
+  padding-top: 45px;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-top: 7px solid #ff5357;
@@ -1537,8 +1542,7 @@ input[type="radio"].visually-hidden {
   position: fixed;
   top: 50%;
   left: 50%;
-  max-width: 465px;
-  padding: 45px 0px;
+  padding-top: 45px;
   background-color: #ffffff;
   border-top: 7px solid #ff5357;
   transform: translate(-50%, -50%);
@@ -1546,8 +1550,22 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-title-success {
+  position: relative;
+  padding-left: 90px;
+  margin-bottom: 58px;
   font-size: 30px;
   line-height: 30px;
+}
+
+.popup-title-success::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 66px;
+  height: 66px;
+  background-image: url('../img/icon-mark.svg'); 
+  background-repeat: no-repeat;
 }
 
 .popup-basket-success button {
@@ -1557,10 +1575,23 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
+.popup-btn-success {
+  min-width: 160px;
+  margin-right: 20px;
+}
+
+.continue-btn {
+  min-width: 220px;
+  padding: 11px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .popup-show {
   display: block;
   animation-name: bounce;
   animation-duration: 0.6s;
+  z-index: 10;
 }
 
 /* /Popup */
@@ -1701,10 +1732,6 @@ input[type="radio"].visually-hidden {
 .catalog {
   width: 700px;
 }
-
-/* .popup-basket-success {
-  display: none;
-} */
 
 .category-text {
   padding: 65px 0;

@@ -975,43 +975,101 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;    
 }
 
-.main-services .default-text {
-  width: 400px;
-}
-
-.default-text {
+.main-services p,
+.about p,
+.contacts p,
+.category-text p {
   margin: 0;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
 
-.services-tabs {
-  width: 240px;
-  padding: 30px 0;  
-  margin: 0;
-  margin-top: 35px;
-  background-image: url('../img/right-shadow.png');
-  background-repeat: no-repeat;
-  background-position: 100%;
-  list-style: none;  
+.main-services .main-services-txt {
+  max-width: 400px;
+  margin-bottom: 25px;
 }
 
 .tab-wrapper {
   display: flex;
 }
 
+.services-tabs {
+  position: relative;
+  width: 240px;
+  padding: 30px 0;  
+  margin: 0; 
+  list-style: none;  
+}
+
+.services-tabs::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-image: url('../img/right-shadow.png');
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
 .services-content-tabs {
+  display: flex;
   flex-grow: 1;
 }
 
+.tab-link {
+  width: 100%;
+  padding: 16px 22px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 31px;
+  color: #ffffff;
+  text-align: left;
+  background-color: #32425c;
+  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-link:hover,
+.tab-link:focus {
+  background-color: #293449;  
+}
+
+.tab-link.active {
+  color: #32425c;
+  background-color: #fff;
+  box-shadow: 0px 1px 0 0 #ffffff, inset 0.6px 0.8px 0 0 #ffffff;
+}
+
 .tab-title {
-  margin-bottom: 24px;
+  margin: 0;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 36px;
+  color: #32425c;
+  text-transform: uppercase;
 }
 
 .tab-content {
   display: none;
-  padding: 30px 0 0 80px;
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+.delivery-tab {
+  background-image: url('../img/bg-delivery.png');  
+}
+
+.garanty-tab {
+  background-image: url('../img/bg-garant.png');
+}
+
+.credit-tab {
+  background-image: url('../img/bg-credit.png');
 }
 
 .tab-content:first-child {
@@ -1077,40 +1135,6 @@ input[type="radio"].visually-hidden {
   margin-right: 10px;
   background-color: #ee3643;
 }
-
-.tab-link {
-  width: 100%;
-  padding: 16px 22px;
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 31px;
-  color: #ffffff;
-  text-align: left;
-  background-color: #32425c;
-  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
-  border: none;
-  cursor: pointer;
-}
-
-.tab-link:hover,
-.tab-link:focus {
-  background-color: #293449;  
-}
-
-.tab-link.active {
-  color: #32425c;
-  background-color: #fff;
-  box-shadow: 0px 1px 0 0 #ffffff, inset 0.6px 0.8px 0 0 #ffffff;
-}
-
-.tab-title {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 36px;
-  color: #32425c;
-  text-transform: uppercase;
-}
-
 /* /Контент */
 
 /* Каталог */

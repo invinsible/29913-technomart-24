@@ -1529,6 +1529,7 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-basket-success {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1697,9 +1698,9 @@ input[type="radio"].visually-hidden {
   width: 700px;
 }
 
-.popup-basket-success {
+/* .popup-basket-success {
   display: none;
-}
+} */
 
 .category-text {
   padding: 65px 0;

@@ -3,9 +3,10 @@ var formLink = document.querySelector(".callback-link");
 
 var popupMap = document.querySelector(".popup-map");
 var popupForm = document.querySelector(".popup-callback");
+var popupBasket = document.querySelector(".popup-basket-success");
 
-//var popup = document.querySelectorAll(".popup");
 var popupClose = document.querySelectorAll(".popup-close");
+var itemBuy = document.querySelectorAll(".item-buy");
 
 
 var toggleShow = function(arg) {
@@ -34,7 +35,12 @@ for (var i = 0, l = popupClose.length; i < l; i++) {
 } 
 
 
-
+for (var i = 0, l = itemBuy.length; i < l; i++) {
+  itemBuy[i].addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popupBasket.classList.add("popup-show");      
+  });
+}
 
 
 // for (var c = 0, b = popupClose.length; c <= b; c++) {

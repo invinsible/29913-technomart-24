@@ -452,6 +452,7 @@ input[type="radio"].visually-hidden {
 
 .site-menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   min-height: 60px;  
   margin: 0;
@@ -963,7 +964,7 @@ input[type="radio"].visually-hidden {
 
 /* Контент */
 .main-services {
-  padding: 66px 0 68px 0;
+  padding: 66px 0 0px 0;
   background-color: #f4f7f9;
 }
 
@@ -993,13 +994,15 @@ input[type="radio"].visually-hidden {
 
 .tab-wrapper {
   display: flex;
+  align-items: center;
 }
 
 .services-tabs {
   position: relative;
-  width: 240px;
-  padding: 30px 0;  
+  min-width: 240px;
+  padding-left: 0;
   margin: 0; 
+  margin-right: 80px;
   list-style: none;  
 }
 
@@ -1007,9 +1010,10 @@ input[type="radio"].visually-hidden {
   content: '';
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 10px;
-  height: 100%;
+  height: 279px;
   background-image: url('../img/right-shadow.png');
   background-repeat: no-repeat;
   background-position: 100%;
@@ -1018,6 +1022,7 @@ input[type="radio"].visually-hidden {
 .services-content-tabs {
   display: flex;
   flex-grow: 1;
+  height: 315px;
 }
 
 .tab-link {
@@ -1047,6 +1052,7 @@ input[type="radio"].visually-hidden {
 
 .tab-title {
   margin: 0;
+  margin-bottom: 35px;
   font-size: 36px;
   font-weight: normal;
   line-height: 36px;
@@ -1057,8 +1063,9 @@ input[type="radio"].visually-hidden {
 .tab-content {
   display: none;
   flex-grow: 1;
+  padding-top: 60px;
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 100% 100%;
 }
 
 .delivery-tab {
@@ -1071,6 +1078,23 @@ input[type="radio"].visually-hidden {
 
 .credit-tab {
   background-image: url('../img/bg-credit.png');
+}
+
+.delivery-tab p {
+  max-width: 275px;
+}
+
+.garanty-tab p {
+  max-width: 300px;
+  max-width: 375px;  
+}
+
+.credit-tab p{
+  margin-bottom: 45px;
+}
+
+.credit-tab .btn {
+  min-width: 135px;
 }
 
 .tab-content:first-child {
@@ -1219,8 +1243,10 @@ input[type="radio"].visually-hidden {
 }
 
 .shop-filter-sort {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  padding: 12px 17px;
+  padding: 10px 17px;
   margin-bottom: 20px;
   background-color: #f7f3ec;
   box-sizing: border-box;
@@ -1232,9 +1258,63 @@ input[type="radio"].visually-hidden {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
-  line-height: 14px;
+  line-height: 18px;
   text-transform: uppercase;
+}
 
+.sorting-list {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sorting-item {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting-item:hover {
+  color: #000000;
+  border-bottom-style: solid;
+}
+
+.sorting-item.active {
+  color: #ee3643;
+  border-bottom-color: transparent;
+}
+
+.sorting-item:first-child {
+  margin-right: 70px;
+}
+
+.sorting-item:nth-child(2) {
+  margin-right: 65px;
+}
+
+.sorting-item:last-child {
+  margin-right: 45px;
+}
+
+.sorting-arrow {
+  fill: #c5c5c5;
+  margin-right: 20px;
+}
+
+.sorting-arrow:hover {
+  fill: #000000;
+}
+
+.sorting-arrow:last-child {
+  margin-right: 0px;
+}
+
+.sorting-arrow.active {
+  fill: #ee3643;
 }
 
 .filter-form fieldset {
@@ -1265,8 +1345,8 @@ input[type="radio"].visually-hidden {
   margin-bottom: 20px;
   list-style: none;
 }
-/* Filter range */
 
+/* Filter range */
 .filter-range {
   color: black;
   text-transform: uppercase;
@@ -1332,7 +1412,7 @@ input[type="radio"].visually-hidden {
 
 .range-toggle {
   position: absolute;
-  top: 30px;
+  top: 28px;
   width: 4px;
   height: 4px;
   background: #ababab;
@@ -1353,9 +1433,8 @@ input[type="radio"].visually-hidden {
 .range-toggle-max {
   left: 73%;
 }
-
-
 /* /Filter range */
+
 .filter-option {  
   padding-left: 35px;
   margin-bottom: 20px;
@@ -1395,7 +1474,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.filter-checkbox:checked +label::before,
+.filter-checkbox:checked + label::before,
 .filter-radio:checked + label::before {
   border: 0;
 }
@@ -1409,6 +1488,7 @@ input[type="radio"].visually-hidden {
   height: 19px;
   border: 3px solid #ccc;
   border-radius: 50%;
+  opacity: 0.8;
 }
 
 .filter-radio:checked + label::after {
@@ -1421,6 +1501,21 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.8;
+}
+
+.filter-checkbox + label::before,
+.filter-checkbox:checked + label::after,
+.filter-radio + label::before,
+.filter-radio:checked + label::after {
+  opacity: 0.7;
+}
+
+.filter-checkbox + label:hover::before,
+.filter-checkbox:checked + label:hover::after,
+.filter-radio + label:hover::before,
+.filter-radio:checked + label:hover::after {
+  opacity: 1;
 }
 
 .filter-form button[type="submit"] {
@@ -1438,6 +1533,7 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   color: #000000;
   border: 1px solid #e5e5e5;
+  border-radius: 3px;
   text-transform: uppercase;
 }
 

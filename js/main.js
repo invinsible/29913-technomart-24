@@ -3,6 +3,7 @@ var formLink = document.querySelector(".callback-link");
 
 var popupMap = document.querySelector(".popup-map");
 var popupForm = document.querySelector(".popup-callback");
+var popupFormSub = document.querySelector(".callback-submit");
 var popupBasket = document.querySelector(".popup-basket-success");
 
 var popupClose = document.querySelectorAll(".popup-close");
@@ -26,6 +27,16 @@ if (formLink != null) {
     toggleShow(popupForm);
   });
 };
+
+if (popupFormSub != null) {
+  popupFormSub.addEventListener("click", function(evt) {
+    if (popupForm.querySelector('[name=name]').value && popupForm.querySelector('[name=email]').value) {
+      console.log("ok");
+    } else {
+      popupForm.classList.add("popup-error");      
+    }
+  });
+}
 
 for (var i = 0, l = popupClose.length; i < l; i++) {
   popupClose[i].addEventListener("click", function(evt) {

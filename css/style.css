@@ -775,7 +775,7 @@ input[type="radio"].visually-hidden {
 }
 
 .shop .items-list {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .item {
@@ -964,7 +964,7 @@ input[type="radio"].visually-hidden {
 
 /* Контент */
 .main-services {
-  padding: 66px 0 0px 0;
+  padding: 66px 0 32px 0;
   background-color: #f4f7f9;
 }
 
@@ -989,7 +989,7 @@ input[type="radio"].visually-hidden {
 
 .main-services .main-services-txt {
   max-width: 400px;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .tab-wrapper {
@@ -1052,7 +1052,7 @@ input[type="radio"].visually-hidden {
 
 .tab-title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
   font-size: 36px;
   font-weight: normal;
   line-height: 36px;
@@ -1065,7 +1065,7 @@ input[type="radio"].visually-hidden {
   flex-grow: 1;
   padding-top: 60px;
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: 100% 160%;
 }
 
 .delivery-tab {
@@ -1113,7 +1113,7 @@ input[type="radio"].visually-hidden {
   padding-right: 55px;
  }
 
-.about .default-text {
+.about p {
   margin-bottom: 23px;
 }
 
@@ -1125,7 +1125,7 @@ input[type="radio"].visually-hidden {
   width: 300px;
 }
 
-.contacts .default-text {
+.contacts p {
   padding-right: 90px;
   margin-bottom: 30px;
 }
@@ -1141,12 +1141,12 @@ input[type="radio"].visually-hidden {
 
 .delivery-company {
   padding-left: 0;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
   list-style: none;
 }
 
 .delivery-company li {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -1216,6 +1216,7 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item:last-child {
+  min-width: 136px;
   margin-right: 0;
 }
 
@@ -1269,7 +1270,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.sorting-item {
+.sorting-item a{
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1278,12 +1279,12 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px dotted #ee3643;
 }
 
-.sorting-item:hover {
+.sorting-item:hover a{
   color: #000000;
   border-bottom-style: solid;
 }
 
-.sorting-item.active {
+.sorting-item.active a{
   color: #ee3643;
   border-bottom-color: transparent;
 }
@@ -1296,7 +1297,7 @@ input[type="radio"].visually-hidden {
   margin-right: 65px;
 }
 
-.sorting-item:last-child {
+.sorting-item:nth-child(3) {
   margin-right: 45px;
 }
 
